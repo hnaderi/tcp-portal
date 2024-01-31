@@ -1,4 +1,4 @@
 FROM scratch
-LABEL maintainer="yaser.amiri95@gmail.com"
-COPY abghand /
-ENTRYPOINT ["/abghand"]
+LABEL maintainer="mail@hnaderi.dev"
+COPY tcp-portal /
+ENTRYPOINT ["/tcp-portal"]
