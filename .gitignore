@@ -12,3 +12,5 @@
 *.out
 
 vendor/
+/.direnv/
+/tcp-portal

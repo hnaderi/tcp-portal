@@ -1,9 +1,9 @@
-package main // import "github.com/Yaser-Amiri/abghand"
+package main
 
 import (
 	"flag"
-	"io/ioutil"
 	"log"
+	"os"
 	"strconv"
 	"strings"
 
@@ -23,10 +23,10 @@ var Config []HostConfig
 
 func init() {
 	var configFilePath string
-	flag.StringVar(&configFilePath, "c", "config.yml", "Path of Abghand config file.")
+	flag.StringVar(&configFilePath, "c", "config.yml", "Path to the config file.")
 	flag.Parse()
 
-	configFileContent, err := ioutil.ReadFile(configFilePath)
+	configFileContent, err := os.ReadFile(configFilePath)
 	if err != nil {
 		log.Fatal(err)
 	}
@@ -59,6 +59,6 @@ func main() {
 			}
 		}
 	}
-	log.Println("Starting Abghand ...")
+	log.Println("Starting TCP Portal...")
 	log.Fatal(server.Run())
 }
