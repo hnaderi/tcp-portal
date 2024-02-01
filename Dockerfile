@@ -1,4 +1,4 @@
 FROM scratch
 LABEL maintainer="mail@hnaderi.dev"
-COPY tcp-portal /
+COPY ./tcp-portal /
 ENTRYPOINT ["/tcp-portal"]

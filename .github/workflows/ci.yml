@@ -14,14 +14,13 @@ jobs:
       with:
         fetch-depth: 0
 
-
     - name: Set up Go
       uses: actions/setup-go@v4
       with:
         go-version: '1.21'
 
     - name: Build
-      run: go build -v ./...
+      run: go build -ldflags "-s -w -linkmode external -extldflags -static"
 
     - name: Test
       run: go test -v ./...
